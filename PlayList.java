@@ -98,7 +98,6 @@ class PlayList {
     public boolean add(int i, Track track) {
         if (i == size) {
             add(track);
-            size++;
             return true;
         } else if ((i < size) && (i >= 0) && (size + 1 <= maxSize)) {
             for (int j = size - 1; j >= i; j--) {
