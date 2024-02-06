@@ -100,7 +100,7 @@ class PlayList {
             add(track);
             size++;
             return true;
-        } else if ((i < size) && (i > 0) && (size + 1 <= maxSize)) {
+        } else if ((i < size) && (i >= 0) && (size + 1 <= maxSize)) {
             for (int j = size - 1; j >= i; j--) {
                 tracks[j + 1] = tracks [j];
             }
@@ -188,10 +188,10 @@ class PlayList {
                 if (tracks[j].getDuration() < tracks[minIndex].getDuration()) {
                     minIndex = j;
                 }
+            }
             Track temp = tracks[minIndex];
             tracks[minIndex] = tracks[i];
             tracks[i] = temp;
-            }
         }
     }
 }
